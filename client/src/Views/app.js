@@ -1,19 +1,17 @@
 import React from 'react';
+import Reboot from 'material-ui/Reboot';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import Home from './Home';
-import Organization from './Organization'
-import './app.scss'
+import './app.scss';
+import Navbar from './Navbar/Navbar';
+import Home from './Home/Home';
+
 export default props =>
 <BrowserRouter>
   <div className="app">
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/organization">Organizations</Link></li>
-    </ul>
-
-    <hr/>
-
-    <Route exact path="/" component={Home}/>
-    <Route path="/organization" component={Organization}/>
+      <Reboot/>
+      <Navbar /> 
+      <Home />
+    {/* <Route exact path="/" component={Home}/>
+    <Route path="/organization" component={Organization}/> */}
   </div>
 </BrowserRouter>
